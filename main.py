@@ -17,7 +17,7 @@ def main():
     vis.mostrar_mapa_completo(mapa)
     vis.mostrar_estado_explorador(explorador)
 
-    # Bucle principal de exploración
+    # Bucle principal de exploracion
     while explorador.esta_vivo:
         print("\n" + "-" * 50)
         vis.mostrar_minimapa(explorador)
@@ -36,7 +36,7 @@ def main():
             resultado = explorador.explorar_habitacion()
             print(f"\n{resultado}")
         else:
-            print("\nMovimiento inválido. No hay salida en esa dirección.")
+            print("\nMovimiento invalido. No hay salida en esa direccion.")
 
         # Mostrar el mapa actualizado cada vez que el jugador se mueve
         vis.mostrar_minimapa(explorador)

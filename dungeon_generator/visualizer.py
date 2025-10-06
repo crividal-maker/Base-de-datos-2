@@ -35,13 +35,13 @@ class Visualizador:
     @staticmethod
     def mostrar_habitacion_actual(explorador):
         h = explorador.mapa.habitaciones[explorador.posicion_actual]
-        console.print(f"[bold cyan]Habitación {h.id}[/bold cyan] ({h.x}, {h.y})")
+        console.print(f"[bold cyan]Habitacion {h.id}[/bold cyan] ({h.x}, {h.y})")
         if h.inicial:
-            console.print("Esta es la habitación inicial.")
+            console.print("Esta es la habitacion inicial.")
         if h.contenido:
             console.print(f"Contenido: {h.contenido.descripcion}")
         else:
-            console.print("Está vacía.")
+            console.print("Esta vacia.")
         console.print(f"Conexiones disponibles: {', '.join(h.conexiones.keys())}")
 
     @staticmethod
@@ -68,5 +68,5 @@ class Visualizador:
         if explorador.inventario:
             items = ", ".join(obj.nombre for obj in explorador.inventario)
         else:
-            items = "(vacío)"
+            items = "(vacio)"
         console.print(f"[bold yellow]Inventario:[/bold yellow] {items}")

@@ -180,7 +180,7 @@ class Mapa:
         if n_habitaciones > self.ancho * self.alto:
             raise ValueError("Demasiadas habitaciones para el tamaño del mapa.")
 
-        # habitación inicial en el borde
+        # habitacion inicial en el borde
         bordes = [(x, 0) for x in range(self.ancho)] + [(x, self.alto - 1) for x in range(self.ancho)] + \
                  [(0, y) for y in range(self.alto)] + [(self.ancho - 1, y) for y in range(self.alto)]
         inicio_x, inicio_y = random.choice(bordes)
@@ -188,7 +188,7 @@ class Mapa:
         self.habitaciones[(inicio_x, inicio_y)] = habitacion_inicial
         self.habitacion_inicial = habitacion_inicial
 
-        # expansión aleatoria
+        # expansion aleatoria
         direcciones = [(0, 1, "norte"), (0, -1, "sur"), (1, 0, "este"), (-1, 0, "oeste")]
         disponibles = [(inicio_x, inicio_y)]
         contador = 1
@@ -312,7 +312,7 @@ class Explorador:
         h = self.mapa.habitaciones[self.posicion_actual]
         h.visitada = True
         if not h.contenido:
-            return "La habitación está vacía."
+            return "La habitacion esta vacia."
         return h.contenido.interactuar(self)
 
     def obtener_habitaciones_adyacentes(self) -> List[str]:

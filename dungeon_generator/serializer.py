@@ -26,7 +26,7 @@ def guardar_partida(mapa, explorador, archivo: str):
         },
     }
 
-    if archivo.endswith(".json"):
+    if archivo.endswith(".json"): #Ayudado con IA
         with open(archivo, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
     elif archivo.endswith(".yaml") or archivo.endswith(".yml"):
