@@ -14,6 +14,7 @@ BDD2/
 │   ├── visualizer.py
 │   ├── serializer.py
 
+(cuando le da a editar en el git se ve bien)
   
 Requisitos
 
@@ -85,7 +86,10 @@ Generando dungeon...
 │ . . T . . . │
 └─────────────┘
 
+(cuando le da a editar en el git se ve bien)
+
 Vida: 5
 Inventario: (vacio)
 Mover (norte/sur/este/oeste) o 'salir': norte
+
 Has encontrado un tesoro: Oro!
